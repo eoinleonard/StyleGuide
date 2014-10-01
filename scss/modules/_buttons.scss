@@ -1,0 +1,26 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+	@include bg-colors($ui-colors);
+	 @include box-shadow(0,0,3px,0, palette(grey, x-light));
+}
+
+[class^="btn--"], button{
+  @extend %center-align;
+  @extend %btn;
+  	margin-bottom: em(20px, 14px); 
+  @include mq(small) {
+	  max-width: 100%;
+	  }
+  @include mq(medium) { 
+	    width: auto;
+	    display: inline-block;
+	  //@include doubly(20px);
+	}
+}
+
+button {
+	@include bg-colors($ui-colors);
+}
