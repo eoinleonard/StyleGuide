@@ -6,19 +6,23 @@
 
 $background-color: #333;
 
-@function pem($px, $base: 16) {
-    @return ($px / $base) + em;
+//nav
+.block {
+    position: relative;
+    
 }
 
 
 
+#outer-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
 
-
-
-
-ul, ol {
-    padding: 0;
-    list-style: none;
+#inner-wrap {
+    position: relative;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -26,18 +30,19 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 
-
+//base styles
 body {
   color: palette(black);
   font-size: $base__font-size;
   font-family: $font-family--primary;
   line-height: ($base__line/$base__font-size);
   width: 100%;
+
 }
 
 p {
   margin: 0 0 em(30px, 18px);
-  font-weight: $font-weight--light;
+  font-weight: $font-weight--medium;
   font-size: em(18px);
   line-height: (27px/18px);
 }
@@ -48,6 +53,12 @@ a {
       text-decoration: underline;
     }
 }
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
 
 blockquote {
   font-weight: $font-weight--light;
@@ -74,151 +85,51 @@ blockquote {
     padding: 0 0.5em;
 }
 
-.block {
-    position: relative;
-    margin: 0 auto;
-    padding: pem(24) pem(20);
-    max-width: pem(960);
-}
-
-.close-btn {
-    display: block;
-    width: pem(42);
-    height: pem(36);
-    padding: 0;
-    border: 0;
-    outline: none;
-    background: $background-color url("../img/close-btn.svg") left center no-repeat;
-    background-size: pem(30) pem(30);
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: 100%;
-    @include opacity(1);
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-
-    .no-svg & {
-        background-image: url("../img/close-btn.png");
-    }
-
-    &:focus,
-    &:hover {
-        @include opacity(1);
-    }
-}
-
-.nav-btn {
-    display: block;
-    width: pem(42);
-    height: pem(36);
-    padding: 0;
-    border: 0;
-    outline: none;
-    background: $background-color url("../img/nav-icon.svg") left center no-repeat;
-    background-size: pem(30) pem(24);
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: 100%;
-    @include opacity(0.7);
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-
-    .no-svg & {
-        background-image: url("../img/nav-icon.png");
-    }
-
-    &:hover,
-    &:focus {
-        @include opacity(1);
-    }
-}
-
-#outer-wrap {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-#inner-wrap {
-    position: relative;
-    width: 100%;
-}
-
-#nav {
-    z-index: 200;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    color: #fff;
-
-    .close-btn {
-        display: none;
-    }
-
-    .block-title {
-        @include visuallyhidden;
-    }
-
-    .block {
-        z-index: 2;
-        position: relative;
-        padding: pem(12) pem(20);
-        background: $background-color;
-    }
-
-    ul {
-        @extend %clearfix;
-        display: block;
-    }
-
-    li {
-        display: block;
-
-        a {
-            display: block;
-            color: #ccc;
-            font-size: pem(14);
-            line-height: pem(18, 14);
-            font-weight: bold;
-            outline: none;
-
-            &:focus,
-            &:hover {
-                color: #fff;
-                background: rgba(255,255,255, 0.1);
-                text-decoration: none;
-            }
-        }
-
-        &.is-active {
-            a {
-                color: #fff;
-            }
-        }
-    }
-}
-
-// header[role="banner"] {
-#top {
-    z-index: 100;
-    position: relative;
-    color: #fff;
-    background: $background-color;
-
-    .block-title {
-        margin: 0;
-        font-size: pem(30);
-        line-height: pem(36, 30);
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    .nav-btn {
-        position: absolute;
-        top: pem(24);
-        left: pem(30);
-    }
+abbr, acronym {
+  cursor: help;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
 }
 
 
-footer[role="contentinfo"] {
-    background: #ddd;
+
+
+// Images
+
+img {
+  margin-bottom: em(24px);
+  max-width: 100%;
+  height: auto;
 }
+
+// Form elements
+form {
+    box-sizing: border-box;
+}
+input, 
+textarea {
+    
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%; 
+    outline: 0;
+    
+}
+
+input:focus, 
+textarea:focus {
+  
+}
+
+// Button
+
+button {
+    outline: 0;
+}
+
+input[type="submit"] {
+    box-sizing: border-box;
+}
+
+
+

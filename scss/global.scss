@@ -21,8 +21,13 @@ $step: 4;
 @import "base/normalize";
 @import "base/base";
 
+@import "layout/major";
+@import "layout/nav";
+
 @import "modules/extends";
 @import "modules/buttons";
+
+@import "vendor/shims";
 
 @media screen and (min-width: 721px) {
     @import "min_width_720";

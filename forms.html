@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Style Guide | Big Bang</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/js-webshim/minified/polyfiller.js"></script>
+    <script src="js/modernizr.js"></script>
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
+    <link rel="stylesheet" href="css/global.css">
+    <!--<![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script>
+      webshim.setOptions({
+      basePath: '/js/js-webshim/minified/shims/',
+      'loadStyles': true, // if 'true', loading 3 .css files in the head
+      'forms': {
+      lazyCustomMessages: true,
+      replaceValidationUI: true
+      },
+      'forms-ext': {
+        // Replace native UI behaviour on Chrome, etc.
+        replaceUI: 'true',
+        types: 'date color'
+        }
+      });
+
+    
+      
+       // Start WEBSHIM and disable polyfill on touch devices
+        if (!$('html').hasClass('touch')) {
+            webshim.polyfill('forms forms-ext sticky');
+
+        }
+
+
+    </script>
+
+    
+</head>
+<body>
+
+<div id="outer-wrap">
+<div id="inner-wrap">
+
+<header id="site-header">
+    <div class="container">
+        <h1 id="logo" role="banner">
+            <div class="block">
+                 <object height="100%" width="100%" data="img/big-bang-logo.svg" class="block-title" type="image/svg+xml">
+                </object>
+                <a class="nav-btn" id="nav-open-btn" href="#nav">Open Menu</a>
+            </div>
+        </h1>
+
+        <nav id="nav">
+            <div class="block">
+                <h2 class="block-title">Navigation</h2>
+                <ul>
+                     <li>
+                        <a href="index.html">Home</a>
+                     </li>
+
+                     <li class="is-active">
+                        <a href="#">Forms</a>
+                     </li>
+
+                     <li>
+                        <a href="#">Images</a>
+                     </li>
+
+                     <li>
+                        <a href="#">Blog</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Layouts</a>
+                    </li>
+                </ul>
+                <a class="close-btn" id="nav-close-btn" href="#logo">Close</a>
+            </div>
+        </nav>
+    </div>
+</header>
+    <div class="container">
+        
+        <section class="form">
+
+            <h1>Forms</h1>
+
+            <form action="#">
+                <div class="form-row">
+                    <label for="name">name</label>
+                    <input required="" type="text" id="name" />
+                </div>
+                <div class="form-row">
+                    <label for="email">email</label>
+                    <input required="" type="email" id="email" />
+                </div>
+                <div class="form-row">
+                    <input type="submit" />
+                </div>
+            </form>
+           
+          </section>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p class="small">Leads, Conversions, Reporting</p>
+            <p class="small">Copyright © Big Bang</p>
+        </div>
+    </footer>
+
+</div>
+<!--/#inner-wrap-->
+</div>
+<!--/#outer-wrap-->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -2,14 +2,28 @@
 // Helpers
 // ==========================================================================
 
-// Clearfix
-
-%clearfix {
-  &:after {
+// = Clearfix
+// -----------------------------
+%cf {
+  *zoom: 1;
+  &:before, &:after {
     content: "";
     display: table;
-    clear: both;
   }
+  &:after {
+    clear:both;
+  }
+}
+
+// = Inline block
+// -----------------------------
+
+%inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
 }
 
 

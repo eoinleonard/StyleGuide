@@ -2,12 +2,13 @@
 // Buttons
 // ==========================================================================
 
-.btn {
+
+.btn, button {
 	@include bg-colors($ui-colors);
 	 @include box-shadow(0,0,3px,0, palette(grey, x-light));
 }
 
-[class^="btn--"], button{
+[class^="btn--"], button, input[type="submit"]{
   @extend %center-align;
   @extend %btn;
   	margin-bottom: em(20px, 14px); 
@@ -19,8 +20,4 @@
 	    display: inline-block;
 	  //@include doubly(20px);
 	}
-}
-
-button {
-	@include bg-colors($ui-colors);
 }

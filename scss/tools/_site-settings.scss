@@ -4,8 +4,8 @@
 
 // Font Stacks
 
-$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
-$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-url--google        : 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,700';
+$font-family--primary    : 'ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Font Weights
@@ -18,9 +18,10 @@ $font-weight--ultra-bold : 900;
 
 // Descriptive Base Colors
 
-$white : #fff;
-$black : #424242;
-$grey  : #797e83;
+$white 		: #fff;
+$black 		: #424242;
+$grey  		: #797e83;
+$dark-grey  : #3d3d3d;
 
 $fountain-blue  : #52bab3;
 $emerald        : #5ece7f;
@@ -30,10 +31,12 @@ $purple-majesty : #9279c3;
 $scooter        : #39add1;
 
 // Color Usage
-$color-primary   : $fountain-blue;
-$color-secondary : $scooter;
-$color-accent    : $emerald;
-$color-shadow    : rgba($black, .2);
+$color-primary   	: $fountain-blue;
+$color-secondary 	: $scooter;
+$color-accent    	: $emerald;
+$color-shadow    	: rgba($black, .2);
+$color-link      	: rgba($black, .2);
+$color-site-header  : $dark-grey;
 
 // Color Palette Modifiers
 

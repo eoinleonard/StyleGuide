@@ -1,0 +1,19 @@
+
+
+.container {
+	width: 90%;
+	margin: auto;
+	max-width: 1200px;
+
+}
+
+#site-header {
+	@extend %cf;
+	background-color: $color-site-header;
+	padding: 7px 0;
+	@include mq(medium)
+     {
+        padding: 15px 0;
+     }
+
+}

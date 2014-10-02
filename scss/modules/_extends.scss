@@ -1,3 +1,4 @@
+
 // Buttons
 
 %btn {
@@ -7,6 +8,7 @@
   color: $white;
   text-transform: uppercase;
   font-size : em(14px);
+  line-height: 1;
   font-weight: $font-weight--medium;
   //transition: opacity $trns-duration;
   display: block;
